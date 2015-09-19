@@ -38,10 +38,10 @@ bulk_write(Data) ->
 data() ->
 
 	[
-		{user, 1, 1, "vamsi vungutur", vv, erlang12},
-		{user, 2, 2, "rahul vungutur", rv, clojur12},
-		{user, 3, 3, "devi vungutur", dv, oracle},
-		{user, 4, 4, "rama vungutur", rav, csharp},
+		{user, 1, 1, "one vungutur", vv, erlang12},
+		{user, 2, 2, "two vungutur", rv, clojur12},
+		{user, 3, 3, "three vungutur", dv, oracle},
+		{user, 4, 4, "four vungutur", rav, csharp},
 		{log, 1, 1, 1, "hey how it going"},
 		{log, 2, 1, 2, "good how are you"},
 		{log, 3, 1, 1, "good as well"},
@@ -58,7 +58,7 @@ write_log(ChatID, UserID, Message) ->
 	all_messages().
 
 add_user() ->
-	Entry = #user{id=5, userid=5, name="wingleton vungutur", username=wv, password=woof12},
+	Entry = #user{id=5, userid=5, name="five vungutur", username=wv, password=woof12},
 	F = fun() -> mnesia:write(Entry) end,
 	mnesia:transaction(F).
 		
